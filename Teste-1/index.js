@@ -1,12 +1,12 @@
 const resultado = document.getElementById('resultado');
 const botao = document.getElementById('botao');
 
-button.addEventListener('click', ()=>{
-    const words = document.getElementById('words').value;
-    const separador = words.split(' ');    
+botao.addEventListener('click', ()=>{
+    const palavras = document.getElementById('palavras').value;
+    const separador = palavras.split(' ');    
     
     const reverse = separador.reverse();
 
-    result.innerHTML = reverse;
+    resultado.innerHTML = reverse;
     
 });
