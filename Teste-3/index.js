@@ -2,13 +2,39 @@ const button = document.getElementById('button');
 const resultado = document.getElementById('resultado');
 const mat = [];
 
+
+// Função para leitura de apenas números, alterar type do input para ultizar.
+
+//              \|
+//              \|
+//             \  |
+//              \|
+
+//button.addEventListener('click', ()=>{
+//    const numeros = document.getElementById('numeros').value;
+//    
+//    for(let i = 0;i < numeros.length;i++){
+//        mat.push(numeros[i]);
+//    }
+//
+//        for(let ordem = mat.length - 1;ordem > 0;ordem--){                    
+//            for(let i = 0;i < ordem;i++){                        
+//                if(mat[i] > mat[i+1]){                            
+//                    [mat[i], mat[i+1]] = [mat[i+1], mat[i]]
+//                        
+//                        }
+//        	        }
+//        	    }
+//            
+//    resultado.innerHTML = mat; 
+//});
+
 button.addEventListener('click', ()=>{
     const numeros = document.getElementById('numeros').value;
-    mat.push(numeros[0]);
+    
+        mat.push(numeros.split(' '));
 
-            
-    for(let z = 0;z < mat.length; z++){
-                
+        for(let z = 0;z < mat.length;z++){
         for(let ordem = mat[z].length - 1;ordem > 0;ordem--){                    
             for(let i = 0;i < ordem;i++){                        
                 if(mat[z][i] > mat[z][i+1]){                            
@@ -17,7 +43,11 @@ button.addEventListener('click', ()=>{
                         }
         	        }
         	    }
-            }
-            
+        }
     resultado.innerHTML = mat; 
+});
+
+
+numeros.addEventListener('focus',()=>{
+    document.getElementById('numeros').value = '';
 });

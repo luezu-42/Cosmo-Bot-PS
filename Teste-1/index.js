@@ -1,5 +1,5 @@
-const result = document.getElementById('result');
-const button = document.getElementById('button');
+const resultado = document.getElementById('resultado');
+const botao = document.getElementById('botao');
 
 button.addEventListener('click', ()=>{
     const words = document.getElementById('words').value;

@@ -1,18 +1,18 @@
-const button = document.getElementById('button');
-const results = document.getElementById('results');
+const botao = document.getElementById('botao');
+const resultado = document.getElementById('resultado');
 
 
-button.addEventListener('click', ()=>{
-    const words = document.getElementById('words').value;
-    const separador = words.split(' ');
+botao.addEventListener('click', ()=>{
+    const palavras = document.getElementById('palavras').value;
+    const separador = palavras.split(' ');
     
     var texto = '';
-    for(i = 0;i < separador.length;i++){
+    for(let i = 0;i < separador.length;i++){
         
         if(i > 0){
         texto += `;${separador[i]}`;
         }
-        results.innerHTML = `"${separador[0]}` + texto + `"`;
+        resultado.innerHTML = `"${separador[0]}` + texto + `"`;
     }
     //results.innerHTML = `"${separador[0]}` + texto + `"`;
 });
