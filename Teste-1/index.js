@@ -1,6 +1,9 @@
 const resultado = document.getElementById('resultado');
 const botao = document.getElementById('botao');
 const mat = [];
+const teste = [];
+const final = [];
+let words = '';
 
 botao.addEventListener('click', ()=>{
     const palavras = document.getElementById('palavras').value;
@@ -53,6 +56,40 @@ botao.addEventListener('click', ()=>{
 //resultado.innerHTML = ` ${texto} `;
 //});
 
-palavras.addEventListener('focus', ()=>{
-    document.getElementById('palavras').value = '';
-});
+
+//  Tentativa de retirada do metodo split() = O(feito) e reverse() = X(falhou)
+
+//botao.addEventListener('click', ()=>{
+//    const palavras = document.getElementById('palavras').value;
+//    let texto = '';
+//    mat.push(palavras);
+//
+//    // split()
+//    for(let i = 0;i < mat[0].length;i++){
+//        if(mat[0][i] != " "){
+//            teste[i] = mat[0][i];
+//            words += teste[i];
+//        }else{ // if(mat[0][i] == " "){
+//            
+//            final.push(words);
+//            words = ' ';
+//        }
+//    }
+//
+//    final.push(words);
+//    final.reverse();
+//
+//    for(let i = 0;i < final.length; i++){
+//        if(final.length == 0){
+//        texto = `${final[i]}` + ` ` ;
+//        }else{
+//        texto += ` ` + `${final[i]}`;
+//        }
+//    }
+//
+//    resultado.innerHTML = `${texto}`
+//});
+//
+//palavras.addEventListener('focus', ()=>{
+//    document.getElementById('palavras').value = '';
+//});
